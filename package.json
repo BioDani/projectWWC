@@ -1,0 +1,22 @@
+{
+  "name": "projectwwc",
+  "version": "1.0.0",
+  "description": "Proyecto de WWC",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "backend",
+    "store",
+    "server"
+  ],
+  "author": "BioDani - Daniel Tejada",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
