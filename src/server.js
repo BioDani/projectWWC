@@ -8,11 +8,11 @@ const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
 
-app.use('/', function(req,res){
-    res.send(`App running.`);
-});
+const { Wallet } = require('./routes');
 
 
+app.use(express.json());
+app.use("/", Wallet);
 
 const startApp = async () => {
     try {
@@ -36,7 +36,6 @@ const startApp = async () => {
         console.error('Unable to connect to the database:', error);
     };
 }
-
 
 startApp();
 
