@@ -1,1 +1,1 @@
-exports.Wallet = require("./wallet.controller");
+exports.Account = require("./account.controller");

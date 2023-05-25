@@ -5,7 +5,9 @@ const walletSchema = mongoose.Schema({
     description: { type: String, required: false },
     category: { type: String, required: true },
     balance: { type: Number, required: true }
-});
+},
+{ versionKey: false }
+);
 
 const Wallet = mongoose.model("Wallet", walletSchema);
 

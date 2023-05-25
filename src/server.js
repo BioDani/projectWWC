@@ -8,11 +8,11 @@ const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
 
-const { Wallet } = require('./routes');
+const { Account } = require('./routes');
 
 
 app.use(express.json());
-app.use("/", Wallet);
+app.use("/", Account);
 
 const startApp = async () => {
     try {

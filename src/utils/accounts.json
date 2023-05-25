@@ -1,0 +1,50 @@
+[{
+  "user": "DTEJADAH",
+  "accountType": "CASH",
+  "name": "CASH MONTHLY",
+  "description": "CASH",
+  "currency": "COP",
+  "balance": 1300000
+},
+{
+  "user": "DTEJADAH",
+  "accountType": "BANK",
+  "name": "BANKING ACCOUNT 1",
+  "description": "ACCOUNT BANCOLOMBIA",
+  "currency": "COP",
+  "balance": 3300000
+},
+{
+  "user": "DTEJADAH",
+  "accountType": "BANK",
+  "name": "BANKING ACCOUNT 2",
+  "description": "ACCOUNT COTRAFA",
+  "currency": "COP",
+  "balance": 3300000
+},
+{
+  "user": "DTEJADAH",
+  "accountType": "SAVING",
+  "name": "CDT 1",
+  "description": "CDT IN BANCOLOMBIA",
+  "currency": "COP",
+  "balance": 500000
+},
+{
+  "user": "DTEJADAH",
+  "accountType": "BANK",
+  "name": "BANKING ACCOUNT 2",
+  "description": "ACCOUNT COTRAFA",
+  "currency": "COP",
+  "balance": 3300000
+},
+{
+  "user": "DTEJADAH",
+  "accountType": "CREDIT",
+  "name": "SCOTIABANK VISA PLATINUM",
+  "description": "CREDIT CARD SCOTIABANK",
+  "currency": "COP",
+  "balance": 10000000
+}]
+
+

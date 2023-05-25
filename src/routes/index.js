@@ -1,1 +1,1 @@
-exports.Wallet = require('./wallet.route');
+exports.Account = require('./account.route');
