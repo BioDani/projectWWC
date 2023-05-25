@@ -1,6 +1,7 @@
 const { Account } = require("../models");
 const { count } = require("../models/wallet.model");
 
+// Get all the accounts
 exports.getAllAccounts = async (_, res) => {
     try {
         const account = await Account.find();
@@ -9,8 +10,7 @@ exports.getAllAccounts = async (_, res) => {
         print(error);
     }
 }
-
-
+// Get the accounts using the Id
 exports.getAccountById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -32,6 +32,7 @@ exports.getAccountById = async (req, res) => {
     }
 }
 
+// Create a new account
 exports.addAccount = async (req, res, next) => {
     try {
         const account = req.body;
@@ -46,6 +47,7 @@ exports.addAccount = async (req, res, next) => {
     }
 }
 
+// Update an account using its Id
 exports.updateAccount = async (req, res, next) => {
     try {
         const { id } = req.params;
@@ -70,6 +72,7 @@ exports.updateAccount = async (req, res, next) => {
     }
 }
 
+// Delete an account using its Id
 exports.deleteAccount = async (req, res, next) => {
     try {
         const { id } = req.params;
