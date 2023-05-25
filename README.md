@@ -1,4 +1,4 @@
-# Proyecto WWC
+# Smart Money: Smart Personal Finances
 
 ## Iniciar proyecto
 ```
