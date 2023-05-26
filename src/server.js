@@ -10,11 +10,13 @@ const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
 
-const { Account } = require('./routes');
+const { Account } = require("./routes");
+const { User } = require("./routes");
 
 
 app.use(express.json());
 app.use("/", Account);
+app.use("/",User);
 
 const startApp = async () => {
     try {

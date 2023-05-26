@@ -1,0 +1,29 @@
+[
+  {
+    "dni": 1234567,
+    "name": "DANIEL",
+    "lastname": "TEJADA",
+    "email": "daniel@example.com",
+    "user": "DTEJADAH",
+    "password": "secretpassword",
+    "phone": "123456789"
+  },
+  {
+    "dni": 9876543,
+    "name": "Maria",
+    "lastname": "González",
+    "email": "maria@example.com",
+    "user": "MariaG",
+    "password": "password123",
+    "phone": "987654321"
+  },
+  {
+    "dni": 5555555,
+    "name": "Juan",
+    "lastname": "Pérez",
+    "email": "juan@example.com",
+    "user": "JuanP",
+    "password": "mysecretpassword",
+    "phone": "555555555"
+  } 
+]

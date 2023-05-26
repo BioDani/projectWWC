@@ -1,3 +1,3 @@
-exports.Wallet = require('./wallet.model');
 exports.Account = require('./account.model');
+exports.User = require('./user.model');
 
