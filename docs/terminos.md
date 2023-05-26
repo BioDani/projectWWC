@@ -37,3 +37,14 @@ Errores del cliente
 Errores del servidor
 - 500: Internal server error
 
+
+### ORM (Object-Relational Mapping)
+Un ORM es una técnica que permite mapear objetos y sus relaciones en una base de datos relacional. Básicamente, el ORM se encarga de traducir las operaciones de lectura y escritura de objetos en operaciones equivalentes en la base de datos. Proporciona una abstracción de la base de datos relacional y permite a los desarrolladores trabajar con objetos en el código fuente de la aplicación sin tener que lidiar directamente con la sintaxis del lenguaje de consulta de la base de datos (como SQL). 
+
+Ejemplo: __Sequelize__,  un ORM de node.js que admite múltiples bases de datos relacionales como MySQL, PostgreSQL, SQLite y MSSQL.
+
+### ODM (Object-Document Mapping) 
+
+Técnica  utilizada en el contexto de bases de datos NoSQL, especialmente en bases de datos orientadas a documentos. Un ODM permite mapear objetos y sus relaciones en documentos almacenados en la base de datos NoSQL. 
+
+Ejemplo: __Mongoose__ para MongoDB. 
