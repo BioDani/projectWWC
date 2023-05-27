@@ -1,1 +1,1 @@
-exports.isAuth = require('./auth.handler');
+exports.authMiddleware = require('./auth.handler');

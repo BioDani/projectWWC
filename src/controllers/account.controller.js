@@ -1,5 +1,5 @@
 const { Account } = require("../models");
-const { count } = require("../models/wallet.model");
+//const { count } = require("../models/wallet.model");
 
 // Get all the accounts
 exports.getAllAccounts = async (_, res) => {
