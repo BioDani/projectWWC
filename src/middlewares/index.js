@@ -1,0 +1,1 @@
+exports.isAuth = require('./auth.handler');

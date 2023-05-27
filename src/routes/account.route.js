@@ -15,5 +15,4 @@ router.patch(`${BASE}/:id`, Account.updateAccount)
 
 router.delete(`${BASE}/:id`, Account.deleteAccount)
 
-
 module.exports = router;

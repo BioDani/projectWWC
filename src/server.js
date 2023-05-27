@@ -2,7 +2,7 @@ require("dotenv").config(); // to use enviroment variables
 const express = require('express');
 const { mongoose } = require("mongoose");
 const sequelize = require('./utils/postgresql.config');
-
+const { isAuth } = require('./middlewares')
 
 // Enviroment variables
 const PORT =  process.env.PORT;
@@ -10,13 +10,16 @@ const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
 
-const { Account } = require("./routes");
-const { User } = require("./routes");
+const { Login,Account, User } = require("./routes");
 
 
 app.use(express.json());
 app.use("/", Account);
 app.use("/",User);
+app.use("/",Login);
+//app.use("/",restrictedView);
+app.use(isAuth);
+
 
 const startApp = async () => {
     try {
