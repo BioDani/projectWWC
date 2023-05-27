@@ -1,4 +1,10 @@
-# Smart Money: Smart Personal Finances
+
+
+![Logo App https://app.brandmark.io](./images/logo_qualpock.png)
+# _Smart Personal Finances_
+
+_**Qualpock**_ is a unique and catchy name that is derived from the words "quality" and "pocket". The "quality" part of the name signifies the app's ability to help users manage their personal finances effectively, while the "pocket" part of the name represents the convenience and portability of the app.
+
 
 ## Iniciar proyecto
 ```

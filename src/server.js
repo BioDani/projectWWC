@@ -1,6 +1,8 @@
 require("dotenv").config(); // to use enviroment variables
 const express = require('express');
-const { mongoose } = require("mongoose"); 
+const { mongoose } = require("mongoose");
+const sequelize = require('./utils/postgresql.config');
+const { authMiddleware } = require('./middlewares')
 
 // Enviroment variables
 const PORT =  process.env.PORT;
@@ -8,11 +10,15 @@ const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
 
-const { Account } = require('./routes');
+const { Login ,Account, User } = require("./routes");
 
 
 app.use(express.json());
 app.use("/", Account);
+app.use("/", User);
+app.use("/", Login);
+app.use(authMiddleware.isAuth);
+
 
 const startApp = async () => {
     try {
@@ -35,6 +41,15 @@ const startApp = async () => {
     } catch(error){
         console.error('Unable to connect to the database:', error);
     };
+
+    try {
+        await sequelize.authenticate();
+        await sequelize.sync();
+        console.log('Connection has been established successfully to postgreSQL database.');
+
+    } catch (error) {
+        
+    }
 }
 
 startApp();
