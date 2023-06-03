@@ -3,12 +3,20 @@ const express = require('express');
 const { mongoose } = require("mongoose");
 const sequelize = require('./utils/postgresql.config');
 const { authMiddleware } = require('./middlewares')
+const http = require('http')
+const { Server } = require("socket.io")
+const { io_ws } = require('./controllers/io.controller')
+
 
 // Enviroment variables
 const PORT =  process.env.PORT;
 const MONGODB_CONNECTION =  process.env.MONGODB_CONNECTION;
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server , {
+    cors: { origins: "*" }
+})
 
 const { Login ,Account, User } = require("./routes");
 
@@ -50,6 +58,14 @@ const startApp = async () => {
     } catch (error) {
         
     }
+
+    try {
+        io.on("Connection" , io_ws);
+
+    } catch (error) {
+        
+    }
+
 }
 
 startApp();

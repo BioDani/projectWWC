@@ -1,30 +1,30 @@
-# Terminos y definiciones
+# **Terminos y definiciones**
 
-### HTTP
+### **HTTP (Hipertext Transfer Protocol)**
 Protocolo de comunicación que permite las transferencias de información en la web. 
 
-### Petición
+### **Petición**
 Cliente envia una petición a través del internet al servidor. El servidor la procesa, manda a internet y la retorna al cliente. 
 
-### Métodos
+### **Métodos**
 Verbo que indica al servidor lo que se quiere hacer. Estos son: GET, POST, PUT, PATCH y DELETE.
 
-### Cabeceras
+### **Cabeceras**
 Información contextual de la petición, cómo quiero hacer la petición. 
 
-### Cookies
+### **Cookies**
 Cabecera para compartir información entre peticiones.
 
-### Cors
+### **Cors**
 Cabecera para manejar información desde url por fuera del servicio. 
 
-### Autenticación
+### **Autenticación**
 Cabecera para asegurarse si se puede hacer peticiones al servidor. 
 
-### Caché
+### **Caché**
 Cabecerra para gestionar durante cuando tiempo la respuesta será la misma. 
 
-### Estados
+### **Estados**
 Número que indica que ha pasado con una petición
 - 200: Ok
 - 201: created
@@ -38,13 +38,31 @@ Errores del servidor
 - 500: Internal server error
 
 
-### ORM (Object-Relational Mapping)
+### **ORM (Object-Relational Mapping)**
 Un ORM es una técnica que permite mapear objetos y sus relaciones en una base de datos relacional. Básicamente, el ORM se encarga de traducir las operaciones de lectura y escritura de objetos en operaciones equivalentes en la base de datos. Proporciona una abstracción de la base de datos relacional y permite a los desarrolladores trabajar con objetos en el código fuente de la aplicación sin tener que lidiar directamente con la sintaxis del lenguaje de consulta de la base de datos (como SQL). 
 
 Ejemplo: __Sequelize__,  un ORM de node.js que admite múltiples bases de datos relacionales como MySQL, PostgreSQL, SQLite y MSSQL.
 
-### ODM (Object-Document Mapping) 
+### **ODM (Object-Document Mapping)** 
 
 Técnica  utilizada en el contexto de bases de datos NoSQL, especialmente en bases de datos orientadas a documentos. Un ODM permite mapear objetos y sus relaciones en documentos almacenados en la base de datos NoSQL. 
 
 Ejemplo: __Mongoose__ para MongoDB. 
+
+### **Sockets**
+Protocolos de conexión entre dos dispositivos para el intercambio de datos.
+
+### **Protocolo**
+
+Conjunto de reglas establecidadas por norma
+
+### **TCP/IP**
+
+Conjunto de protocolo de control de transmisión de información redes, entre equipos informáticos e internet.
+
+
+### **API**
+
+Interfaz de programación de aplicaciones que permite la comunicación entre diferentes sistemas o servicios.
+
+### Clases con mayusculas y variables con minusculas
