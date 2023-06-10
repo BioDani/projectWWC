@@ -1,5 +1,6 @@
 name: Primer workflow
 
+
 on:
   workflow_dispatch:
   
@@ -9,8 +10,31 @@ on:
 
 jobs:
   compile:
+    name: build
     runs-on: ubuntu-latest
-    steps:
-      - name: Compile
-      - run: npx tsc
+    steps:   
+      - name: Checkout
+        uses: actions/checkout@v3
+    
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+    
+      - name: Install and build
+        run: |
+          npm i --silent
+          npm run build
+        working-directory: .
+      
+      
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: build
+          path: |
+            PROJECTWWC/build
+            *.js
+            !node_modules
+        
     
