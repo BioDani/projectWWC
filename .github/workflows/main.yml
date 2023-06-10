@@ -10,6 +10,7 @@ on:
 
 jobs:
   compile:
+    name: build
     runs-on: ubuntu-latest
     steps:   
       - name: Checkout
@@ -30,7 +31,9 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: build
-          path: PROJECTWWC/build
-          ignore: node_modules
+          path: |
+            build
+            *.js
+            !node_modules
         
     
