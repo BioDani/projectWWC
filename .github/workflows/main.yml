@@ -23,7 +23,7 @@ jobs:
     
       - name: Install and build
         run: |
-          npm i
+          npm i --silent
           npm run build
         working-directory: .
       
