@@ -1,0 +1,16 @@
+name: Primer workflow
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches:
+    - typescript
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compile
+      - run: npx tsc
+    
