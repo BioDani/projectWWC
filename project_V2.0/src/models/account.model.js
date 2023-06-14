@@ -3,13 +3,24 @@ const mongoose = require('mongoose');
 
 const accountSchema = mongoose.Schema(
     {
-        user: {
+        id_user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'users',
         },
-        balance: { type: Number, require: true },
+        account_id: {},
+        account_name: {},
+        account_type: {},
+        account_balance: {},
+        account_currency: {},
+        account_transactions: [
+            {
+                
+            }
+        ]
     },
-    { versionKey: false }
+    {
+        versionKey: false,
+    }
 );
 
 const Account = mongoose.model('account', accountSchema);
