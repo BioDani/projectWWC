@@ -8,3 +8,17 @@ exports.getAllUsers = async (_, res) => {
       console.log(error);
   }
 };
+
+exports.addUser = async (req, res, next) => {
+  try {
+      const new_user = await User.create(req.body);
+      res.status(200).json({
+          status: 200,
+          message: "New user was created.",
+          user: new_user
+      })
+  } catch (error) {
+      console.error(error.message)
+      next(error);
+  }
+}

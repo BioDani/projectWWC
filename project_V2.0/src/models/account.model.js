@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const transactionSchema = mongoose.Schema({
+    _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: () => new mongoose.Types.ObjectId().toString(),
+    },
     initial_value: { type: Number},
     transaction_value: { type: Number},
     account_balance: { type: Number},
@@ -9,6 +13,10 @@ const transactionSchema = mongoose.Schema({
 
 const accountSchema = mongoose.Schema(
     {
+        _id: {
+            type: mongoose.Schema.Types.ObjectId,
+            default: () => new mongoose.Types.ObjectId().toString(),
+        },
         id_user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'users',
