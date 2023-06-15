@@ -1,4 +1,7 @@
+const bcrypt = require('bcrypt');
 const { User } = require('../models');
+
+const saltRounds = 10;
 
 exports.getAllUsers = async (_, res) => {
     try {
@@ -26,10 +29,11 @@ exports.addUser = async (req, res, next) => {
 
 exports.addUser = async (req, res, next) => {
     try {
+        const newUser = await req.body;
         const { _id, role, name, surname, email, password } = await req.body;
 
-        const existingUserbyEmail = await User.findOne({ email });
-        
+        const existingUserbyEmail = await User.findOne( newUser[email] );
+
         if (existingUserbyEmail) {
             res.status(409).send({
                 status: 409,
@@ -37,12 +41,24 @@ exports.addUser = async (req, res, next) => {
             });
         }
 
-        const new_user = await User.create(req.body);
+
+        
+        const hash = bcrypt.hashSync( password , saltRounds);
+        console.log(hash);
+        console.log(bcrypt.compareSync( password, hash));
+        newUser[password] = hash
+
+        res.status(200).json({
+            status: 200, 
+            hash: hash,
+            password: password
+        });
+
+        /*         const new_user = await User.create(req.body);
         res.status(200).json({
             status: 200,
             message: "New user was created.",
             user: new_user
-        })
-
+        }) */
     } catch (error) {}
 };
