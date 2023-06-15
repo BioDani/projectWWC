@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
-//const users = require("./user.model")
+
+const transactionSchema = mongoose.Schema({
+    initial_value: { type: Number},
+    transaction_value: { type: Number},
+    account_balance: { type: Number},
+    date_transaction: { type: Date},
+});
 
 const accountSchema = mongoose.Schema(
     {
@@ -7,21 +13,17 @@ const accountSchema = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'users',
         },
-        account_id: {},
-        account_name: {},
-        account_type: {},
-        account_balance: {},
-        account_currency: {},
-        account_transactions: [
-            {
-                
-            }
-        ]
+        account_name: { type: String, require: true, minLength: 2, maxLength: 20 },
+        account_type: { type: String, require: true, minLength: 2, maxLength: 20 },
+        account_balance: { type: Number, require},
+        account_currency: { type: String, require: true, minLength: 2, maxLength: 20 },
+        account_transactions: [transactionSchema]
     },
     {
         versionKey: false,
     }
 );
+
 
 const Account = mongoose.model('account', accountSchema);
 

@@ -5,11 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "start": "node src/app.js",
-    "lint": "eslint src/**/*.js --fix",
-    "prettier": "prettier --write .",
-    "prepare": "husky install",
-    "postinstall": "npm run prepare"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +20,6 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6.1.1",
-    "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8"
