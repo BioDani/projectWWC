@@ -23,7 +23,7 @@ const accountSchema = mongoose.Schema(
         },
         account_name: { type: String, require: true, minLength: 2, maxLength: 20 },
         account_type: { type: String, require: true, minLength: 2, maxLength: 20 },
-        account_balance: { type: Number, require},
+        account_balance: { type: Number},
         account_currency: { type: String, require: true, minLength: 2, maxLength: 20 },
         account_transactions: [transactionSchema]
     },
