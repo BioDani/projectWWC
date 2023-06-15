@@ -1,15 +1,11 @@
 const express = require("express");
-
 const { User } = require("../controllers");
 
 const router = express.Router()
+const API_V1 = "/api/v1/";
 
-const BASE = "/api/v1/users";
-
-
-router.get( BASE , User.getAllUsers);
-
-router.post(BASE,  User.addUser) 
+router.get(API_V1+'users', User.getAllUsers)
+router.post(API_V1+'register', User.addUser)
 
 
 

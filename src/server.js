@@ -53,5 +53,3 @@ const startApp = async () => {
 }
 
 startApp();
-
-
