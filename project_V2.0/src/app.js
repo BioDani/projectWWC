@@ -2,11 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const { mongoose } = require("mongoose");
 
-const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
 const { User, Account } = require('./routes')
+const { add} = require('./middlewares')
 
 PORT = process.env.PORT;
 MONGODB_CONNECTION = process.env.MONGODB_CONNECTION;
@@ -41,5 +41,3 @@ startApp = async () => {
 };
 
 startApp();
-
-//console.log(uuidv4());

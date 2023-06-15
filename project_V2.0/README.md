@@ -30,3 +30,10 @@ sudo npm install --save-dev eslint eslint-config-prettier eslint-config-standard
 }
 
 ```
+
+
+Contraseña: Al menos 8 caracteres
+Al menos una letra minúscula
+Al menos una letra mayúscula
+Al menos un dígito
+No puede contener espacios en blanco
