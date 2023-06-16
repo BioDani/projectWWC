@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const { User } = require('../models');
 
-const saltRounds = 10;
+SAlT_ROUNDS = 10
 
 exports.getAllUsers = async (_, res) => {
     try {
@@ -12,27 +12,13 @@ exports.getAllUsers = async (_, res) => {
     }
 };
 
-/* 
-exports.addUser = async (req, res, next) => {
-  try {
-      const new_user = await User.create(req.body);
-      res.status(200).json({
-          status: 200,
-          message: "New user was created.",
-          user: new_user
-      })
-  } catch (error) {
-      console.error(error.message)
-      next(error);
-  }
-} */
-
 exports.addUser = async (req, res, next) => {
     try {
         //const newUser = await req.body;
         const { _id, role, name, surname, email, password } = await req.body;
 
-        const existingUserbyEmail = await User.findOne( {email});
+        const existingUserbyEmail = await User.findOne({email});
+        console.log(existingUserbyEmail);
 
         if (existingUserbyEmail) {
             res.status(409).send({
@@ -41,9 +27,7 @@ exports.addUser = async (req, res, next) => {
             });
         }
 
-
-        
-        const hash = bcrypt.hashSync( password , saltRounds);
+        const hash = bcrypt.hashSync( password , SAlT_ROUNDS);
         //console.log(hash);
         //console.log(bcrypt.compareSync( password, hash));
 
@@ -56,11 +40,6 @@ exports.addUser = async (req, res, next) => {
             "password": hash
         }
 
-/*         res.status(200).json({
-            status: 200, 
-            newUser: newUser
-        }); */
-
         const new_user = await User.create(user);
         res.status(200).json({
             status: 200,
@@ -69,3 +48,4 @@ exports.addUser = async (req, res, next) => {
         })
     } catch (error) {}
 };
+
