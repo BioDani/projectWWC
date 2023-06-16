@@ -3,6 +3,7 @@ const { User } = require('../models');
 const jwt = require('jsonwebtoken');
 
 exports.isAdmin = async (req, res, next) => {
+    
     try {
         const token = req.headers.authorization;
 
