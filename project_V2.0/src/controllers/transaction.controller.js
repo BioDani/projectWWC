@@ -13,8 +13,7 @@ exports.addIncome = async (req, res) => {
 
     const account = await Account.find({ _id: _id });
 
-    if (account[0].id_user = id_user) {
-
+    if ((account[0].id_user = id_user)) {
         const transaction = {
             initial_value: account[0].account_balance,
             transaction_value: transaction_value,
@@ -22,22 +21,23 @@ exports.addIncome = async (req, res) => {
             date_transaction: new Date(),
         };
 
-/*         new_transaction = await Account.updateOne({_id: _id},
-            { $push: {account_transactions: transaction } } ) */
-        new_balance = await Account
-        .findOneAndUpdate({_id: _id},
-            {account_balance: transaction.account_balance})
-            .findOneAndUpdate({_id: _id},
-                { $push: {account_transactions: transaction } } );
-        
+
+        new_balance = await Account.findOneAndUpdate(
+            { _id: _id },
+            {
+                $set: {account_balance: transaction.account_balance},
+                $push: {  account_transactions: transaction  }
+            },
+            {
+                new: true,
+            }
+        );
 
         res.status(200).json({
             status: 200,
             message: new_balance,
         });
-
     }
-    
 };
 
 exports.addExpense = async (req, res) => {
@@ -52,8 +52,7 @@ exports.addExpense = async (req, res) => {
 
     const account = await Account.find({ _id: _id });
 
-    if (account[0].id_user = id_user) {
-
+    if ((account[0].id_user = id_user)) {
         const transaction = {
             initial_value: account[0].account_balance,
             transaction_value: -transaction_value,
@@ -61,20 +60,20 @@ exports.addExpense = async (req, res) => {
             date_transaction: new Date(),
         };
 
-/*         new_transaction = await Account.updateOne({_id: _id},
-            { $push: {account_transactions: transaction } } ) */
-        new_balance = await Account
-        .findOneAndUpdate({_id: _id},
-            {account_balance: transaction.account_balance})
-            .findOneAndUpdate({_id: _id},
-                { $push: {account_transactions: transaction } } );
-        
+        new_balance = await Account.findOneAndUpdate(
+            { _id: _id },
+            {
+                $set: {account_balance: transaction.account_balance},
+                $push: {  account_transactions: transaction  }
+            },
+            {
+                new: true,
+            }
+        );
 
         res.status(200).json({
             status: 200,
             message: new_balance,
         });
-
     }
-    
 };

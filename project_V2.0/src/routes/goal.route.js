@@ -11,10 +11,7 @@ const API_V1 = "/api/v1/";
 
 //router.post(API_V1+'newGoal', validatorHandler( addAccountValidate, 'body'), Goal.addGoal)
 router.post(API_V1+'newGoal', validatorHandler( addGoalValidate, 'body'), Goal.addGoal)
-// admin
-//router.get(API_V1+'accounts', Account.getAllAccounts) 
 
-// Admin and user
-//router.get(API_V1+'goals', verifyJWT.isAuth , Account.getAllAccountsUser);
+router.post(API_V1+'paymentGoal',  verifyJWT.isAuth, Goal.addPayment);
 
 module.exports = router;

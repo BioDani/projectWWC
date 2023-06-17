@@ -5,6 +5,7 @@ const goal_name = Joi.string()
 const goal_balance = Joi.number()
 const goal_targetAmount = Joi.number()
 const goal_fulfilment = Joi.number()
+const payment = Joi.array()
 const amount = Joi.number()
 const date = Joi.date()
 
@@ -14,9 +15,9 @@ const addGoalValidate = Joi.object({
     goal_balance: goal_balance.required(),
     goal_targetAmount: goal_targetAmount.required(),
     goal_fulfilment: goal_fulfilment,
+    payment: payment,
     amount: amount,
     date: date,
-
 });
 
 module.exports = {
