@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 exports.login = async (req, res) => {
   try {
 
-    const { email } = req.body; 
+    const { email, password } = req.body; 
     token = await jwt.sign({ email }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" })
     
     return res.status(200).json({
