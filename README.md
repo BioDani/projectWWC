@@ -31,7 +31,6 @@ En caso de que solo quiera usar la aplicación, está se encuentra desplegada a 
 
 [https://qualpock-api.onrender.com](https://qualpock-api.onrender.com/healthcheck).
 
-
 Finalmente, podrá correr el proyecto en un ambiente local de desarrollo usando `nodemon` así 
 
 ```sh
