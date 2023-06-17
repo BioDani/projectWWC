@@ -2,11 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const { mongoose } = require("mongoose");
 
-const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
-const { User, Account } = require('./routes')
+const { User, Account, Transaction, Goal , HealthChecker} = require('./routes')
+const { verifyJWT, verifyRole} = require('./middlewares')
 
 PORT = process.env.PORT;
 MONGODB_CONNECTION = process.env.MONGODB_CONNECTION;
@@ -17,6 +17,9 @@ app.use(express.json());
 // Routes
 app.use('/', User);
 app.use('/', Account);
+app.use('/', Transaction);
+app.use('/', Goal);
+app.use('/healthcheck', HealthChecker);
 
 startApp = async () => {
     try {
@@ -41,5 +44,3 @@ startApp = async () => {
 };
 
 startApp();
-
-//console.log(uuidv4());

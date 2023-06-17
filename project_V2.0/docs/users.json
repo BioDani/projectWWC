@@ -1,0 +1,34 @@
+[
+    {
+        "_id": "648bfd714f8c96e93e8b4eae",
+        "role": "admin",
+        "name": "Goblin",
+        "surname": "Gringotts",
+        "email": "goblin@gmail.com",
+        "password": "Password1"
+    },
+    {
+        "_id": "648bfdd64f8c96e93e8b4eb1",
+        "role": "user",
+        "name": "Bellatrix",
+        "surname": "Lestrange",
+        "email": "ikilledsiriusblack@gmail.com",
+        "password": "Password2"
+    },
+    {
+        "_id": "648bfe7c4f8c96e93e8b4eb4",
+        "role": "user",
+        "name": "Harry",
+        "surname": "Potter",
+        "email": "hpotter@gmail.com",
+        "password": "Password3"
+    },
+    {
+        "_id": "648bfef04f8c96e93e8b4eb7",
+        "role": "user",
+        "name": "Hermione",
+        "surname": "Granger",
+        "email": "mrsgranger@hotmail.com",
+        "password": "Password4"
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "648c00db4f8c96e93e8b4eb9",
+        "id_user": "648bfdd64f8c96e93e8b4eb1",
+        "account_name": "Holidays",
+        "account_type": "saving account",
+        "account_balance": 1000,
+        "account_currency": "USD",
+        "account_transactions": []
+    },
+    {
+        "_id": "648c019042a3afbc9850857c",
+        "id_user": "648bfdd64f8c96e93e8b4eb1",
+        "account_name": "Daily expenses",
+        "account_type": "cash",
+        "account_balance": 500,
+        "account_currency": "USD",
+        "account_transactions": []
+    },
+    {
+        "_id": "648c01b642a3afbc9850857e",
+        "id_user": "648bfe7c4f8c96e93e8b4eb4",
+        "account_name": "Daily expenses",
+        "account_type": "cash",
+        "account_balance": 700,
+        "account_currency": "USD",
+        "account_transactions": []
+    },
+    {
+        "_id": "648c021c42a3afbc98508580",
+        "id_user": "648bfef04f8c96e93e8b4eb7",
+        "account_name": "Daily expenses",
+        "account_type": "cash",
+        "account_balance": 750,
+        "account_currency": "GBP",
+        "account_transactions": []
+    },
+    {
+        "_id": "648c026842a3afbc98508582",
+        "id_user": "648bfef04f8c96e93e8b4eb7",
+        "account_name": "For university",
+        "account_type": "saving account",
+        "account_balance": 10000,
+        "account_currency": "USD",
+        "account_transactions": []
+    }
+]
