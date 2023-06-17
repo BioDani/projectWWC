@@ -10,7 +10,7 @@ const router = express.Router()
 const API_V1 = "/api/v1/";
 
 
-router.post(API_V1+'newAccount', validatorHandler( addAccountValidate, 'body'), Account.addAccount)
+router.post(API_V1+'newAccount', verifyJWT.isAuth ,validatorHandler( addAccountValidate, 'body'), Account.addAccount)
 
 // admin
 //router.get(API_V1+'accounts', Account.getAllAccounts) 
