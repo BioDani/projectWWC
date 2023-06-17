@@ -1,3 +1,30 @@
+![Logo App https://app.brandmark.io](./images/logo_qualpock.png)
+# _Finanzas personales conscientes_
+
+_**Qualpock**_ es un nombre pegadizo que deriva de las palabras "calidad" y "bolsillo". El nombre hace referencia a la capacidad de la API para ayudar a los usuarios a gestionar sus finanzas personales con comodidad y portabilidad.
+
+https://qualpock-api.onrender.com
+
+# Setup
+Para correr el proyecto de manera local
+
+```sh
+git clone https://github.com/BioDani/projectWWC.git
+```
+Navege hasta la carpeta que almacena la versión V.2.1.0 de la aplicación.
+
+```sh
+projectWWC % cd project_V2.0
+```
+
+
+
+1. Crear modelo
+2. Usar el modelo en las rutas
+3. Usar las rutas para definir los controladores
+
+
+
 ```bash
 npm install express mongoose dotenv 
 ```
