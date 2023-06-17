@@ -5,7 +5,7 @@ const { mongoose } = require("mongoose");
 
 const app = express();
 
-const { User, Account, Transaction, Goal } = require('./routes')
+const { User, Account, Transaction, Goal , HealthChecker} = require('./routes')
 const { verifyJWT, verifyRole} = require('./middlewares')
 
 PORT = process.env.PORT;
@@ -19,6 +19,7 @@ app.use('/', User);
 app.use('/', Account);
 app.use('/', Transaction);
 app.use('/', Goal);
+app.use('/healthcheck', HealthChecker);
 
 startApp = async () => {
     try {
