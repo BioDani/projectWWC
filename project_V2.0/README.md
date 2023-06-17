@@ -16,14 +16,39 @@ Navege hasta la carpeta que almacena la versión V.2.1.0 de la aplicación.
 ```sh
 projectWWC % cd project_V2.0
 ```
+Instale todas las dependencias y paquetes que requiere el proyecto. Para ello deberá contar el gestor de paquetes de *__node.js__*, __*npm*__. 
 
+```sh
+npm install 
+```
+Cree en la raiz del proyecto `project_V2.0` un archivo `.env` que almacene las variables de entorno que son requeridas.
 
+Use como referencia el archivo [.env.example](.env.example) que se encuentra en el presente repositorio. 
+
+Finalmente, podrá correr el proyecto en un ambiente de desarrollo usando `nodemon` así 
+
+```sh
+npm run dev
+```
+O en ambientes de prueba como
+
+```sh
+npm run start
+```
+
+#
+
+Adicionalmente, deberá 
 
 1. Crear modelo
 2. Usar el modelo en las rutas
 3. Usar las rutas para definir los controladores
 
+Adicionalmente, deberá usar la suite de servicios de datos en la nube `MongoDB Atlas` para crear una base de datos en la cual se almacenarán los documentos o collections que son requeridos en el proyecto. 
 
+En caso de que solo quiera usar la aplicación, está se encuentra desplegada a través de Render y puede ser usada a través de plataformas API como `Postman` o `insomnia`. 
+
+[https://qualpock-api.onrender.com](https://qualpock-api.onrender.com/healthcheck).
 
 ```bash
 npm install express mongoose dotenv 
