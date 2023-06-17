@@ -8,7 +8,7 @@ const goal_fulfilment = Joi.number()
 const amount = Joi.number()
 const date = Joi.date()
 
-const addAccountValidate = Joi.object({
+const addGoalValidate = Joi.object({
     id_user: id_user.required(),
     goal_name: goal_name.min(2).max(20).required(),
     goal_balance: goal_balance.required(),
