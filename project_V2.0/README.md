@@ -11,7 +11,7 @@ Para correr el proyecto de manera local
 ```sh
 git clone https://github.com/BioDani/projectWWC.git
 ```
-Navege hasta la carpeta que almacena la versión V.2.1.0 de la aplicación.
+Navege hasta la carpeta que almacena la versión V.2.1.0 de la aplicación. Ver tag de la aplicación funcional: [release 3: Qualpock V2.1.0 ](https://github.com/BioDani/projectWWC/releases/tag/v2.1.0).
 
 ```sh
 projectWWC % cd project_V2.0
@@ -25,7 +25,14 @@ Cree en la raiz del proyecto `project_V2.0` un archivo `.env` que almacene las v
 
 Use como referencia el archivo [.env.example](.env.example) que se encuentra en el presente repositorio. 
 
-Finalmente, podrá correr el proyecto en un ambiente de desarrollo usando `nodemon` así 
+Adicionalmente, deberá usar la suite de servicios de datos en la nube `MongoDB Atlas` para crear una base de datos en la cual se almacenarán los documentos o collections que son requeridos en el proyecto. 
+
+En caso de que solo quiera usar la aplicación, está se encuentra desplegada a través de Render y puede ser usada a través de plataformas API como `Postman` o `insomnia`. 
+
+[https://qualpock-api.onrender.com](https://qualpock-api.onrender.com/healthcheck).
+
+
+Finalmente, podrá correr el proyecto en un ambiente local de desarrollo usando `nodemon` así 
 
 ```sh
 npm run dev
@@ -36,7 +43,7 @@ O en ambientes de prueba como
 npm run start
 ```
 
-#
+# 
 
 Adicionalmente, deberá 
 
@@ -44,11 +51,7 @@ Adicionalmente, deberá
 2. Usar el modelo en las rutas
 3. Usar las rutas para definir los controladores
 
-Adicionalmente, deberá usar la suite de servicios de datos en la nube `MongoDB Atlas` para crear una base de datos en la cual se almacenarán los documentos o collections que son requeridos en el proyecto. 
 
-En caso de que solo quiera usar la aplicación, está se encuentra desplegada a través de Render y puede ser usada a través de plataformas API como `Postman` o `insomnia`. 
-
-[https://qualpock-api.onrender.com](https://qualpock-api.onrender.com/healthcheck).
 
 ```bash
 npm install express mongoose dotenv 
