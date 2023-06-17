@@ -9,12 +9,15 @@ const {verifyJWT , verifyRole } = require("../middlewares");
 const router = express.Router()
 const API_V1 = "/api/v1/";
 
+
 router.post(API_V1+'newAccount', validatorHandler( addAccountValidate, 'body'), Account.addAccount)
 
 // admin
 //router.get(API_V1+'accounts', Account.getAllAccounts) 
 
-// user
-router.get(API_V1+'accounts', verifyJWT.isAuth , Account.getAllAccountsUser) 
+// Admin and user
+router.get(API_V1+'accounts', verifyJWT.isAuth , Account.getAllAccountsUser);
+
+
 
 module.exports = router;

@@ -27,6 +27,8 @@ exports.addUser = async (req, res, next) => {
             });
         }
 
+        
+
         const hash = bcrypt.hashSync( password , SAlT_ROUNDS);
         //console.log(hash);
         //console.log(bcrypt.compareSync( password, hash));
